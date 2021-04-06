@@ -96,6 +96,10 @@ L.Icon = L.Class.extend({
 		var img = this._createImg(src, oldIcon && oldIcon.tagName === 'IMG' ? oldIcon : null);
 		this._setIconStyles(img, name);
 
+		if (this.options.crossOrigin || this.options.crossOrigin === '') {
+			img.crossOrigin = this.options.crossOrigin === true ? '' : this.options.crossOrigin;
+		}
+
 		return img;
 	},
 
