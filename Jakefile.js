@@ -30,16 +30,8 @@ function hint(msg, args) {
 // Returns the version string in package.json, plus a semver build metadata if
 // this is not an official release
 function calculateVersion(officialRelease, callback) {
-
 	var version = require('./package.json').version;
-
-	if (officialRelease) {
-		callback(version);
-	} else {
-		git.short(function(str) {
-			callback (version + '+' + str);
-		});
-	}
+	callback(version);
 }
 
 desc('Check Leaflet source for errors with ESLint');

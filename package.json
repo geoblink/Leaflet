@@ -1,6 +1,6 @@
 {
   "name": "@geoblink/leaflet",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "JavaScript library for mobile-friendly interactive maps",
   "devDependencies": {
     "eslint": "^3.5.0 <3.6.0",
@@ -27,7 +27,7 @@
   "scripts": {
     "test": "jake test",
     "build": "jake build",
-    "release": "./build/publish.sh"
+    "release": "yarn publish"
   },
   "eslintConfig": {
     "root": true,
